@@ -1,0 +1,376 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: lightskyblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 18px;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+header>.logo{
+    margin-right: 20px;
+}
+.logo{
+    width: 80px;
+    height: 80px;
+}
+header>.school-info{
+    display: flex;
+    flex-direction: column;
+}
+header>.school-info>p{
+    margin: 0;
+}
+header>.school-info>a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+header>.school-info>a:hover {
+    text-decoration: underline;
+}
+nav{
+    background-color: lightskyblue;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+nav>ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav>ul>li{
+    display: inline-block;
+    position: relative;
+}
+nav>ul>li>a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    display: inline-block;
+}
+nav>ul>li:hover>a{
+    background-color: dodgerblue;
+}
+nav>ul>li>ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: lightskyblue;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+nav>ul>li:hover>ul{
+    display: block;
+}
+nav>ul>li>ul>li{
+    display: block;
+    width: 180px;
+}
+nav>ul>li>ul>li>a{
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    display: block;
+}
+nav>ul>li>ul>li>a:hover {
+    background-color: dodgerblue;
+}
+.banner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 5px;
+    border: 3px solid orange;
+    box-sizing: border-box;
+}
+.banner>img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.content-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+}
+article{
+    width: 80%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+article>h2{
+    color: dimgray;
+    margin-bottom: 10px;
+}
+article>img{
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+}
+article>a{
+    text-decoration: none;
+    color: orangered;
+    font-weight: bold;
+}
+article>p{
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.read-more{
+    color: dodgerblue;
+    cursor: pointer;
+    font-weight: bold;
+}
+aside{
+    width: 20%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px double orangered;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+aside>h2{
+    margin-bottom: 20px;
+    color: orangered;
+}
+aside>a{
+    text-decoration: none;
+    color: dodgerblue;
+    font-weight: bold;
+}
+aside>a:hover{
+    text-decoration: underline;
+}
+footer{
+    background-color: lightskyblue;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+footer>a{
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+}
+footer>a:hover {
+    text-decoration: underline;
+}
+.news-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.new-item{
+    width: 100%;
+    font-size: large;
+}
+.map{
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.items{
+    width: 60%;
+    padding: 5px;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+.new-item>label{
+    font-weight: bold;
+    font-variant: small-caps;
+}
+.button{
+    padding: 8px 30px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: gray;
+    color: white;
+}
+.img-note{
+    text-align: center;
+    font-size: 80px;
+}
+</style>
+<body>
+    <header>
+        <div>
+            <a href="Index.html" title="Home">
+                <img class="logo" src="img/Logo.jpg" alt="home">
+            </a>
+        </div>
+        <div class="school-info">
+            <p>Sở Giáo Dục Đào Tạo Thành Phố Đà Nẵng</p>
+            <p>
+                <a href="Index.html" rel="home">Trường THPT Liên Chiểu</a>
+            </p>
+        </div>
+    </header>
+    <nav>
+            <ul>
+                <li><a href="Index.html">Trang Chủ</a></li>
+                <li>
+                    <a href="#">Giới Thiệu</a>
+                    <ul>
+                        <li><a href="GioiThieuTruong.html">Giới Thiệu Chung</a></li>
+                        <li><a href="SoDoToChuc.html">Sơ Đồ Tổ Chức</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="LienHe.html">Liên Hệ</a>
+                </li>
+                <li>
+                    <a href="#">Tài Nguyên</a>
+                    <ul>
+                        <li><a href="ThuVienAnhVideo.html">Thư viện ảnh và video</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Khảo Thí</a>
+                    <ul>
+                        <li><a href="GopY.html">Góp Ý</a></li>
+                        <li><a href="HoiDap.html">Hỏi Đáp</a></li>
+                    </ul>
+                </li>
+            </ul>
+    </nav>
+    <div class="banner">
+        <img src="img/GiaoVien.jpg" alt="banner">
+    </div>
+    <div class="content-container">
+        <article>
+            <div>
+                <h1>Góp Ý</h1>
+                <hr>
+                <br><br>
+                <div class="news-items">
+                    <form class="new-item">
+                        <label>tên của bạn(Bắt Buộc)</label><br>
+                        <input name="name" required placeholder="Họ và Tên" type="text" class="items">
+                        <br><br>
+                        <label>email(Bắt Buộc)</label><br>
+                        <input name="mail" placeholder="Email" required type="email" class="items">
+                        <br><br>
+                        <label>vấn đề cần góp ý</label>
+                        <br>
+                        <textarea rows="10" class="items" name="mess" id="1"></textarea>
+                        <br><br>
+                        <label>cơ sở vật chất có ổn định?(chấm điểm từ thang điểm 10, từ không hài lòng tới hài lòng)</label>
+                        <br>
+                        <label>1</label><input type="radio" name="ChamDiem" id="1">
+                        <label>2</label><input type="radio" name="ChamDiem" id="1">
+                        <label>3</label><input type="radio" name="ChamDiem" id="1">
+                        <label>4</label><input type="radio" name="ChamDiem" id="1">
+                        <label>5</label><input type="radio" name="ChamDiem" id="1">
+                        <label>6</label><input type="radio" name="ChamDiem" id="1">
+                        <label>7</label><input type="radio" name="ChamDiem" id="1">
+                        <label>8</label><input type="radio" name="ChamDiem" id="1">
+                        <label>9</label><input type="radio" name="ChamDiem" id="1">
+                        <label>10</label><input type="radio" name="ChamDiem" id="1">
+                        <br>
+                        <textarea rows="10" class="items" name="mess" id="2" placeholder="Nếu Không Hài Lòng Vui Lòng Nêu Góp Ý"></textarea>
+                        <br>
+                        <label>giáo dục có phù hợp để học sinh theo học?(chấm điểm từ thang điểm 10, từ không hài lòng tới hài lòng)</label>
+                        <br>
+                        <label>1</label><input type="radio" name="ChamDiem" id="1">
+                        <label>2</label><input type="radio" name="ChamDiem" id="1">
+                        <label>3</label><input type="radio" name="ChamDiem" id="1">
+                        <label>4</label><input type="radio" name="ChamDiem" id="1">
+                        <label>5</label><input type="radio" name="ChamDiem" id="1">
+                        <label>6</label><input type="radio" name="ChamDiem" id="1">
+                        <label>7</label><input type="radio" name="ChamDiem" id="1">
+                        <label>8</label><input type="radio" name="ChamDiem" id="1">
+                        <label>9</label><input type="radio" name="ChamDiem" id="1">
+                        <label>10</label><input type="radio" name="ChamDiem" id="1">
+                        <br>
+                        <textarea rows="10" class="items" name="mess" id="2" placeholder="Nếu Không Hài Lòng Vui Lòng Nêu Góp Ý"></textarea>
+                        <br><br>
+                        <button type="submit" class="button">Gửi Đi</button>
+                    </form>
+                </div>
+            </div>
+        </article>
+        <aside>
+            <div>
+                <p class="img-note">
+                    <img src="img/TuyenSinh.png" alt="1">
+                </p>
+                <p class="img-note">
+                    <img src="img/KiThiTHPT.jpg" alt="2">
+                </p>
+                <p class="img-note">
+                    <img src="img/BoGD.png" alt="3">
+                </p>
+                <p class="img-note">
+                    <img src="img/vnedu-1.png" alt="4">
+                </p>
+                <p class="img-note">
+                    <img src="img/thumbnail.jpg" alt="5">
+                </p>
+                <hr>
+                <h2>Lịch Làm Việc</h2>
+                <div><a href="#">KẾ HOẠCH LÀM VIỆC CÔNG TÁC THÁNG 9 NĂM 2024</a></div>
+                <br>
+                <br>
+                <div><a href="#">KẾ HOẠCH LÀM VIỆC CÔNG TÁC THÁNG 8 NĂM 2024</a></div>
+                <br>
+                <br>
+                <div><a href="#">KẾ HOẠCH LÀM VIỆC CÔNG TÁC THÁNG 7 NĂM 2024</a></div>
+                <br>
+                <br>
+                <div><a href="#">KẾ HOẠCH LÀM VIỆC CÔNG TÁC THÁNG 6 NĂM 2024</a></div>
+                <hr>
+            </div>
+            <div>
+                <iframe name="facebook" width="1000px" height="300px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.6/plugins/page.php?adapt_container_width=true&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df2c97d52fc11aeb97%26domain%3Dthptlienchieu.edu.vn%26is_canvas%3Dfalse%26origin%3Dhttp%253A%252F%252Fthptlienchieu.edu.vn%252Ff796f2e2643d3eb05%26relation%3Dparent.parent&amp;container_width=300&amp;height=300&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FTr%25C6%25B0%25E1%25BB%259Dng-THPT-Li%25C3%25AAn-Chi%25E1%25BB%2583u-%25C4%2590%25C3%25A0-N%25E1%25BA%25B5ng-125713431425171%2F&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;tabs=timeline" style="border: none; visibility: visible; width: 500px; height: 500px;" class=""></iframe>
+            </div>
+        </aside>
+    </div>
+    <footer>
+        <p>
+			Số 2 Trần Tấn, Quận Liên Chiểu, Đà Nẵng, Việt Nam - Điện Thoại : 0511 3789877
+		</p>
+        <div>
+            <a href="#" title="to-top">Lên Đầu Trang</a>
+        </div>
+    </footer>
+    <script src="https://uhchat.net/code.php?f=a9e9f6"></script>
+</body>
+</html>
